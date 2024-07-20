@@ -699,16 +699,14 @@ nav {
 /* Tablet styles (851px - 1439px) */
 @media (min-width: 851px) and (max-width: 1439px) { 
   #Produsul{
-    font-family: Myriad Pro;
-    font-size: 70px;
-    font-weight: 700;
-    line-height: 84px;
-    letter-spacing: 0.06em;
+     font-size: 70px;
     margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
     text-align: center; 
     color: #47174C; 
     font-family: Myriad Pro;
-    padding-bottom: 10px;
   }
   
   .product-card-title {
@@ -837,225 +835,86 @@ nav {
 }
 }
 
+
 /* Livrare Section */
+
 #Livrare {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
   font-family: "Myriad Pro", sans-serif;
   font-size: 50px;
   text-align: center;
   height: 100px;
-  color: #47174C;
-}
-
-.p {
-  font-family: "Myriad Pro", sans-serif;
-  font-size: 20px;
-  text-align: center;
-  color: #47174C;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #F5F5F5;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-image {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.card-title {
-  font-family: "Myriad Pro", sans-serif;
-  font-size: 24px;
+  font-family: Myriad Pro;
+  font-size: 30px;
   font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.06em;
   color: #47174C;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-family: "Myriad Pro", sans-serif;
-  font-size: 16px;
-  color: #47174C;
-}
-
-@media (min-width: 390px) and (max-width: 480px) {
-
-  .unique-section {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .h1{
-    font-size: 30px;
-    height: 80px;
-  }
-
-
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-container {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .text-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .text-container h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .text-container p {
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .text-container input[type="text"],
-  .text-container input[type="number"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    background-color: #d5d9ec;
-    border-color: #47174C;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
-
-  .text-container input[type="submit"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 390px) and (max-width: 480px) {
-  #Livrare {
-    font-size: 30px;
-    height: 80px;
   }
 
   .p {
+
+    font-family: "Myriad Pro", sans-serif;
+    font-family: Inter;
     font-size: 12px;
-    margin-top: 16px;
-    margin-bottom: 32px;
-  }
+    font-weight: 500;
+    line-height: 14.52px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    
+    }
 
-  .card-container {
-    flex-direction: column;
-    gap: 24px;
-  }
 
-  .card {
-    padding: 24px;
-  }
+/* Desktop styles (min-width: 1440px) */
+@media (min-width: 1440px){
+  #Livrare {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    margin-bottom: 15px;
+    }
 
-  .card-image {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 20px;
-  }
-
-  .card-title {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .card-text {
-    font-size: 14px;
-  }
+    .p{
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.78px; 
+      letter-spacing: 0.06em;
+      text-align: center;
+      color:#47174C;
+    }
 }
 
-/* Card Container Styles */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+/* Tablet styles (768px - 1439px) */
+@media (min-width: 768px) and (max-width: 1439px) { 
+  #Livrare {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    }
 
-.card {
-  background-color: #CDACD1;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
+    .p{
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.78px; 
+      letter-spacing: 0.06em;
+      text-align: center;
+      color:#47174C;
+    }
 }
-
-.p {
-  font-family: "Myriad Pro", Inter;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 26.63px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #47174C;
-}
-
-.card-image {
-  width: 70px;
-  height: 60px;
-  margin: 10px;
-}
-
-.card-title {
-  font-weight: 700;
-  margin-top: 0;
-  font-size: 28px;
-  line-height: 33.6px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #47174C;
-}
-
-.card-text {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.78px;
-  text-align: center;
-  color: #751B57B2;
-}
-
 
 
 /* Footer Styles */
