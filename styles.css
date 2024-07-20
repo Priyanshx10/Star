@@ -16,7 +16,7 @@ body, html {
 /* Header Styles */
 header {
   position:static;
-  background: rgba(255, 255, 255, 0.07); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.053); /* Semi-transparent background */
   top: 0;
   left: 0;
   right: 0;
@@ -259,14 +259,16 @@ nav {
   object-fit: cover;
   display: block;
   }
-  /* Small Screen Styles (min-width: 390px and max-width: 480px) */
-  @media (min-width: 390px) and (max-width: 480px) {
+  
+/* Mobile styles (340px - 850px) */
+@media (min-width: 340px) and (max-width: 850px) {
   .slide .small-screen-image {
   display: block;
   }
   }
-  /* Medium Screen Styles (min-width: 540px and max-width: 768px) */
-  @media (min-width: 540px) and (max-width: 768px) {
+
+ /* Tablet styles (851px - 1439px) */
+  @media (min-width: 851px) and (max-width: 1439px) {
   .slide .large-screen-image {
   display: none;
   }
@@ -280,3 +282,279 @@ nav {
   display: none;
   }
   }
+
+
+/* Despre Noi Section */
+
+.flex-container-despre {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.text-container-despre {
+  position: relative;
+  top: 90px;
+  flex: 1;
+  color: #47174C;
+}
+
+.text-container-despre p {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.features-list {
+  padding-top: 10px;
+  list-style-type: disc; /* This ensures bullet points are shown */
+}
+
+.features-list li {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.Produsul {
+  max-width: 100%;
+  height: auto;
+}
+
+.toggle-button {
+  display: none;
+  background-color: #47174C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+/* Mobile styles (340px - 850px) */
+@media (min-width: 340px) and (max-width: 850px) {
+  .flex-container-despre {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: auto; 
+    padding: 20px 0; 
+  }
+
+  #Despre {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    margin-top: 5px;
+}
+
+.flex-container-despre img {
+    max-width: 80%; 
+    height: auto;
+    margin-top: 10px; 
+    padding-left: 10px; 
+    padding-top: 10px;
+}
+
+.image-container{
+    flex: unset;
+    width: 100%;
+}
+
+.text-container-despre{
+  width: 310px;
+  height: 190px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.text-container-despre p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px; 
+    letter-spacing: 0.04em;
+    text-align: left; 
+    padding: auto;
+    color: #47174C; 
+    margin-bottom: 5px; 
+}
+
+  .features-list li {
+    font-family: Inter; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #47174C; 
+  }
+
+  .toggle-button {
+    position: relative;
+    bottom: 5px;
+    display: block;
+  }
+
+  .features-list {
+    display: none;
+  }
+}
+
+/* Tablet styles (851px - 1439px) */
+@media (min-width: 851px) and (max-width: 1439px) { 
+  #Despre {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+  }
+
+  .flex-container-despre img {
+    max-width: 80%; 
+    height: 300px;
+    padding-top: 20px;
+    margin-top: 60px;
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+    padding-left: 10px; 
+    padding-top: 10px;
+}
+
+.text-container-despre{
+  width: 310px;
+  height: 190px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.text-container-despre p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: auto;
+    color: #47174C; 
+    margin-bottom: 5px; 
+    font-family: Inter;
+  }
+
+
+.features-list li {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  font-family: Inter; 
+  text-align: left;
+  color: #47174C; 
+}
+}
+
+/* Desktop styles (min-width: 1440px) */
+@media (min-width: 1440px) {
+
+  #Despre {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    margin-bottom: 15px;
+  }
+
+  .flex-container-despre {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+  }
+  
+  .text-container-despre {
+    position: relative;
+    top: 90px;
+    flex: 1;
+    color: #47174C;
+  }
+  
+  .text-container-despre p {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
+  
+  .features-list {
+    padding-top: 20px;
+    list-style-type: disc; /* This ensures bullet points are shown */
+    padding-left: 20px; /* Indentation for the list */
+  }
+  
+  .features-list li {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  
+  .Produsul {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .toggle-button {
+    display: none;
+    background-color: #47174C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  
+
+}
