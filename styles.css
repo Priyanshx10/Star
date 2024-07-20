@@ -835,6 +835,108 @@ nav {
 }
 }
 
+/**/
+
+/*Descoperă Produsul nostru Section*/
+
+h1 {
+  font-family: Myriad Pro;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #47174C;
+}
+
+h3 {
+  padding-top: 30px;
+  color: #47174C;
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+p {
+  font-family: 'Inter', sans-serif; 
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: center;
+  color: #47174C;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 310px; 
+  height: 44px; 
+  gap: 10px; 
+  border-radius: 14px 14px 14px 14px ; 
+  border: 1px solid #751B57; 
+  opacity: 1; 
+  box-sizing: border-box; 
+  background-color: #d5d9ec;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field::placeholder {
+  color: #47174C; 
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  letter-spacing: 0.06em;
+  padding-left: 10px;
+  text-align: start;
+  justify-content: center;
+}
+
+.styled-button {
+  width: 194px;
+  height: 44px;
+  border-radius: 14px 14px 14px 14px;
+  border: 1px solid #751B57; 
+  opacity: 1; 
+  box-sizing: border-box; 
+  background-color: #CDACD1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.styled-button::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  letter-spacing: 0.06em;
+  padding-left: 10px;
+  text-align: start;
+  justify-content: center;
+}
+
+
+@media (min-width: 350px) and (max-width: 768px) {
+ .contact-info-image{
+  display: none;
+ }
+
+ #product-image-container img {
+  width: 104px;
+  height: 181px;
+  position: absolute; /* Ensure positioning works */
+  top: 289px;
+  left: 104px;
+  gap: 0px; /* Note: gap is not applicable to images */
+  opacity: 0; /* This will make the image invisible */
+}
+}
 
 /* Livrare Section */
 
@@ -855,16 +957,39 @@ nav {
   }
 
   .p {
-
-    font-family: "Myriad Pro", sans-serif;
-    font-family: Inter;
-    font-size: 12px;
+    font-family: "Myriad Pro", Inter;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 14.52px;
-    letter-spacing: 0.04em;
+    line-height: 26.63px;
+    letter-spacing: 0.06em;
     text-align: center;
-    
+    color: #47174C;
+    padding-left: 30px;
+    padding-right: 30px ;
     }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #CDACD1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.card-image {
+  width: 70px;
+  height: 60px;
+  margin: 10px;
+}
 
 
 /* Desktop styles (min-width: 1440px) */
@@ -895,14 +1020,13 @@ nav {
 /* Tablet styles (768px - 1439px) */
 @media (min-width: 768px) and (max-width: 1439px) { 
   #Livrare {
-    font-size: 70px;
-    margin-top: 40px;
-    font-weight: 700;
-    line-height: 60px;
-    letter-spacing: 0.06em;
-    text-align: center; 
-    color: #47174C; 
     font-family: Myriad Pro;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #47174C;
     }
 
     .p{
@@ -924,7 +1048,6 @@ footer {
   background-color: white;
   justify-content: space-around;
   align-items: center;
-  padding: 40px 0;
 }
 
 footer .logo {
@@ -961,7 +1084,7 @@ footer .contact-info p {
   color: #47174C;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 768px) {
   footer {
     flex-direction: column;
     height: auto;
