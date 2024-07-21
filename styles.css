@@ -1,0 +1,1235 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #d5d9ec;
+  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  position:static;
+  background: rgba(255, 255, 255, 0.053); /* Semi-transparent background */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000; /* High z-index to ensure it's above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.nav-mobile {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.nav-links {
+  display: none;
+}
+
+.burger-menu {
+  display: block;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.burger-menu label {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  background: #333;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+#nav-toggle:checked ~ .nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px; /* Default logo size */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  color: #47174C;
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 600;
+}
+
+.contact-info img {
+  margin-right: 5px;
+}
+
+/* Mobile styles (340px - 768px) */
+@media (min-width: 340px) and (max-width: 768px) {
+  .logo {
+      width: 50px; 
+  }
+
+  .contact-info {
+      display: none; 
+  }
+
+  .nav-links {
+      display: none; 
+  }
+
+  .burger-menu {
+      display: block; 
+  }
+
+  nav {
+      padding: 10px;
+  }
+
+  .nav-links {
+      position: fixed; 
+      top: 50px; 
+      left: 0;
+      right: 0;
+      background-color: rgba(248, 248, 248, 0.95);
+      z-index: 999; 
+  }
+
+  .nav-links a {
+      padding: 10px;
+      text-align: center;
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(2) {
+      opacity: 0;
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Wide Mobile styles (769px - 850px) */
+@media (min-width: 769px) and (max-width: 850px) {
+  .logo {
+      width: 50px; 
+  }
+
+  .contact-info {
+      display: none; 
+  }
+
+  .nav-links {
+      display: none; 
+  }
+
+  .burger-menu {
+      display: block; 
+  }
+
+  nav {
+      padding: 10px;
+  }
+
+  .nav-links {
+      position: fixed; 
+      top: 50px; 
+      left: 0;
+      right: 0;
+      background-color: rgba(248, 248, 248, 0.95);
+      z-index: 999;
+  }
+
+  .nav-links a {
+      padding: 10px;
+      text-align: center;
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(2) {
+      opacity: 0;
+  }
+
+  #nav-toggle:checked ~ .burger-menu label span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+}
+/* Tablet styles (851px - 1439px) */
+@media (min-width: 851px) and (max-width: 1439px) {
+  .logo {
+      width: 75px; /* Adjust logo size for tablets */
+  }
+
+  .nav-links {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .burger-menu {
+      display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content:space-between;
+}
+
+.burger-menu {
+    display: none;
+}
+
+nav {
+    padding: 5px;
+}
+
+.nav-links a {
+    color: #47174C;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 600;
+}
+  nav {
+      padding: 8px;
+  }
+
+  .nav-links a {
+      padding: 5px;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    color: #47174C;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 600;
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-weight: 700; 
+    line-height: 21.6px;
+    text-align: left;
+
+}
+}
+
+/* Desktop styles (above 1024px) */
+@media (min-width: 1440px) {
+  .logo {
+      width: 100px; /* Default logo size for desktops */
+  }
+
+  .nav-links {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .burger-menu {
+      display: none;
+  }
+
+  nav {
+      padding: 20px;
+  }
+
+  .nav-links a {
+      color: #47174C;
+      text-decoration: none;
+      margin: 0 15px;
+      font-family: "Myriad Pro", sans-serif;
+      font-weight: 600;
+  }
+
+  .contact-info {
+      display: flex;
+      align-items: center;
+      color: #47174C;
+      font-family: "Myriad Pro", sans-serif;
+      font-weight: 600;
+  }
+}
+
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+  position: relative;
+  }
+  .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  }
+  .slide.active {
+  opacity: 1;
+  }
+  .slide .large-screen-image,
+  .slide .medium-screen-image {
+  display: none;
+  }
+  .slide .small-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+  
+/* Mobile styles (340px - 768px) */
+@media (min-width: 340px) and (max-width: 768px) {
+  .slide .small-screen-image {
+  display: block;
+  }
+  }
+
+   /* Tablet styles (851px - 1439px) */
+   @media (min-width: 769px) and (max-width: 1439px) {
+    .slide .large-screen-image {
+    display: none;
+    }
+    .slide .medium-screen-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    .slide .small-screen-image {
+    display: none;
+    }
+    }
+
+ /* Tablet styles (851px - 1439px) */
+  @media (min-width: 851px) and (max-width: 1439px) {
+  .slide .large-screen-image {
+  display: none;
+  }
+  .slide .medium-screen-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  .slide .small-screen-image {
+  display: none;
+  }
+  }
+
+
+/* Despre Noi Section */
+
+.flex-container-despre {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.text-container-despre {
+  position: relative;
+  top: 90px;
+  flex: 1;
+  color: #47174C;
+}
+
+.text-container-despre p {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.features-list {
+  padding-top: 10px;
+  list-style-type: disc; /* This ensures bullet points are shown */
+}
+
+.features-list li {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.Produsul {
+  max-width: 100%;
+  height: auto;
+}
+
+.toggle-button {
+  display: none;
+  background-color: #47174C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+/* Mobile styles (340px - 850px) */
+@media (min-width: 340px) and (max-width: 850px) {
+  .flex-container-despre {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: auto; 
+    padding: 20px 0; 
+  }
+
+  #Despre {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    margin-top: 5px;
+}
+
+.flex-container-despre img {
+    max-width: 80%; 
+    height: auto;
+    margin-top: 10px; 
+    padding-left: 10px; 
+    padding-top: 10px;
+}
+
+.image-container{
+    flex: unset;
+    width: 100%;
+}
+
+.text-container-despre{
+  width: 310px;
+  height: 190px;
+  gap: 0px;
+  opacity: 0px;
+  margin-bottom:100px; 
+}
+
+.text-container-despre p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px; 
+    letter-spacing: 0.04em;
+    text-align: left; 
+    padding: auto;
+    color: #47174C; 
+}
+
+  .features-list li {
+    font-family: Inter; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #47174C; 
+  }
+
+  .toggle-button {
+    position: relative;
+    bottom: 5px;
+    display: block;
+  }
+
+  .features-list {
+    display: none;
+  }
+}
+
+/* Tablet styles (851px - 1439px) */
+@media (min-width: 851px) and (max-width: 1439px) { 
+
+  #Despre {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+  }
+
+  .flex-container-despre img {
+    max-width: 80%; 
+    height: 300px;
+    padding-top: 20px;
+    margin-top: 60px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-left: 10px; 
+    padding-top: 10px;
+    margin-bottom: 200px;
+}
+
+.text-container-despre{
+  width: 310px;
+  height: 190px;
+  gap: 0px;
+  opacity: 0px;
+  margin-bottom:50px; 
+}
+
+.text-container-despre p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: auto;
+    color: #47174C; 
+    margin-bottom: 5px; 
+    font-family: Inter;
+  }
+
+
+.features-list li {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  font-family: Inter; 
+  text-align: left;
+  color: #47174C; 
+}
+}
+
+/* Desktop styles (min-width: 1440px) */
+@media (min-width: 1440px) {
+
+  #Despre {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    margin-bottom: 15px;
+  }
+
+  .flex-container-despre {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+  }
+  
+  .text-container-despre {
+    position: relative;
+    top: 90px;
+    flex: 1;
+    color: #47174C;
+  }
+  
+  .text-container-despre p {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
+  
+  .features-list {
+    padding-top: 20px;
+    list-style-type: disc; /* This ensures bullet points are shown */
+    padding-left: 20px; /* Indentation for the list */
+  }
+  
+  .features-list li {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  
+  .Produsul {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .toggle-button {
+    display: none;
+    background-color: #47174C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+}
+
+/*Produsul nostru Section /
+/* Product Card Styles */
+
+/* Mobile styles (340px - 850px) */
+@media (min-width: 340px) and (max-width: 850px) {
+  #Produsul{
+    font-family: Myriad Pro;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #47174C;
+  }
+  
+  .product-card-title {
+    color: #751B57;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.63px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    font-family: Inter;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 310px;
+    padding: 20px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #CDACD14D;
+    padding-bottom: 20px;
+  }
+
+  .product-card img{
+    width: 282px;
+    height: 296px;
+    gap: 0px;
+    border-radius: 18px 0px 0px 0px;
+    padding: 10px;
+
+  }
+
+  .product-card-description {
+    color: #751B57B2;
+    margin-bottom: 0;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: center;
+    font-family: Inter;
+  }
+
+  .bg-pulm-img {
+    width: 83px;
+    height: 102px;
+    position: relative;
+    left: 80%; 
+    transform: translateY(-50%); 
+    opacity: 1; 
+    z-index: 1000; 
+  }
+}
+
+/* Tablet styles (851px - 1439px) */
+@media (min-width: 851px) and (max-width: 1439px) { 
+  #Produsul{
+     font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+  }
+  
+  .product-card-title {
+    color: #751B57;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    padding: 20px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #CDACD14D;
+  }
+
+  .product-card img{
+    width: 282px;    ;
+    height: 296px;
+    top: 42px;
+    left: 1210px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .product-card-description {
+    color: #751B57B2;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: center;
+    font-family: Inter;
+  }
+
+  .bg-pulm-img {
+    margin-top: 50px;
+    width: 230px;
+    height: 284px;
+    position: relative;
+    left: 80%; 
+    bottom: -300px;
+    transform: translateY(-50%); 
+    opacity: 1; 
+    z-index: 500; 
+}
+
+}
+
+/* Desktop styles (min-width: 1440px) */
+@media (min-width: 1440px){
+  #Produsul{
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    margin-bottom: 15px;
+  }
+  
+  .product-card-title {
+    color: #751B57;
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;       
+    padding: 20px;          
+    margin: 10px auto;       
+    border: 1px solid #ccc; 
+    border-radius: 8px;     
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background: rgba(205, 172, 209, 0.3); 
+  }
+
+  .product-card img{
+    width: 448px;
+    height: 470px;
+    gap: 0px;
+    border-radius: 18px 0px 0px 0px;
+    padding: 10px;
+
+  }
+
+  .product-card-description {
+    color: #751B57B2;
+    margin-bottom: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: center;
+  }
+
+  .bg-pulm-img {
+    margin-top: 50px;
+    width: 298px;
+    height: 368px;
+    position: relative;
+    left: 80%; 
+    bottom: -300px;
+    transform: translateY(-50%); 
+    opacity: 1; 
+    z-index: 500; 
+}
+}
+
+/*De Ce Produsul nostru*/
+@media (min-width: 350px) and (max-width: 768px) {
+  .Dece {
+      font-family: 'Myriad Pro', sans-serif; 
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: #47174C;  
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px; 
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+
+    .product-image {
+      width: 308px;
+      height: 287px;
+      position: relative;
+      top: -10px; 
+      left: 71px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+  }
+
+  p{
+    font-family: 'Inter', sans-serif; 
+    font-size: 12px;                  
+    font-weight: 500;                
+    line-height: 14.52px;           
+    letter-spacing: 0.04em;          
+    margin: 0;
+    padding-left:25px;
+    padding-right:25px;            
+  }
+
+  h5 {
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+    color: #47174C;
+    padding-left:30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .product-image {
+      width: 618px;
+      height: 574px;
+      padding-left: 40px;
+  }
+
+  p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #47174C;
+    text-align: start;
+  }
+
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .product-image {
+      width: 732px;
+      height: 679px;
+      top: 356px; 
+  }
+
+  h5{
+    font-family: Myriad Pro;
+    font-size: 22px;
+    font-weight: 700; 
+    line-height: 26.4px;
+    letter-spacing: 0.06em;
+    text-align: right;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+
+
+/*Descoperă Produsul nostru Section*/
+
+h1 {
+  font-family: Myriad Pro;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #47174C;
+}
+
+h3 {
+  padding-top: 30px;
+  color: #47174C;
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+p {
+  font-family: 'Inter', sans-serif; 
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: center;
+  color: #47174C;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 310px; 
+  height: 44px; 
+  gap: 10px; 
+  border-radius: 14px 14px 14px 14px ; 
+  border: 1px solid #751B57; 
+  opacity: 1; 
+  box-sizing: border-box; 
+  background-color: #d5d9ec;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field::placeholder {
+  color: #47174C; 
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  letter-spacing: 0.06em;
+  padding-left: 10px;
+  text-align: start;
+  justify-content: center;
+}
+
+.styled-button {
+  width: 194px;
+  height: 44px;
+  border-radius: 14px 14px 14px 14px;
+  border: 1px solid #751B57; 
+  opacity: 1; 
+  box-sizing: border-box; 
+  background-color: #CDACD1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.styled-button::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  letter-spacing: 0.06em;
+  padding-left: 10px;
+  text-align: start;
+  justify-content: center;
+}
+
+
+@media (min-width: 350px) and (max-width: 768px) {
+ .contact-info-image{
+  display: none;
+ }
+
+ #product-image-container img {
+  width: 104px;
+  height: 181px;
+  position: absolute; /* Ensure positioning works */
+  top: 289px;
+  left: 104px;
+  gap: 0px; /* Note: gap is not applicable to images */
+  opacity: 0; /* This will make the image invisible */
+}
+}
+
+/* Livrare Section */
+
+#Livrare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  height: 100px;
+  font-family: Myriad Pro;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: #47174C;
+  }
+
+  .p {
+    font-family: "Myriad Pro", Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.63px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #47174C;
+    padding-left: 30px;
+    padding-right: 30px ;
+    }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #CDACD1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.card-image {
+  width: 70px;
+  height: 60px;
+  margin: 10px;
+}
+
+
+/* Desktop styles (min-width: 1440px) */
+@media (min-width: 1440px){
+  #Livrare {
+    font-size: 70px;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center; 
+    color: #47174C; 
+    font-family: Myriad Pro;
+    margin-bottom: 15px;
+    }
+
+    .p{
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.78px; 
+      letter-spacing: 0.06em;
+      text-align: center;
+      color:#47174C;
+    }
+}
+
+/* Tablet styles (768px - 1439px) */
+@media (min-width: 768px) and (max-width: 1439px) { 
+  #Livrare {
+    font-family: Myriad Pro;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #47174C;
+    }
+
+    .p{
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.78px; 
+      letter-spacing: 0.06em;
+      text-align: center;
+      color:#47174C;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+  display: flex;
+  height: 310px;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .logo {
+  width: 194px;
+  height: 97px;   
+}
+
+footer h5 {
+  color: #CDACD1;
+  margin-bottom: 10px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+}
+
+footer .contact-info {
+  display: flex;
+  align-items: center;
+}
+
+footer .contact-info img {
+  margin-right: 8px;
+}
+
+footer .contact-info p {
+  font-weight: bold;
+  font-family: Myriad Pro;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26.4px;
+  text-align: left;
+  color: #47174C;
+}
+
+@media (min-width: 350px) and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  footer .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+
+  }
+
+  footer h5 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #CDACD1;
+  }
+
+  footer .contact-info {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  footer .contact-info img {
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  footer .contact-info p {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px;
+  }
+}
+
+/* Copyright Section Styles */
+.copyright {
+  background-color: #47174C;
+  height: 59px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: left;
+  color: #FAF9FF;
+}
+
