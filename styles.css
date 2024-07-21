@@ -835,7 +835,99 @@ nav {
 }
 }
 
-/**/
+/*De Ce Produsul nostru*/
+@media (min-width: 350px) and (max-width: 768px) {
+  .Dece {
+      font-family: 'Myriad Pro', sans-serif; 
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: #47174C;  
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px; 
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+
+    .product-image {
+      width: 308px;
+      height: 287px;
+      position: relative;
+      top: -10px; 
+      left: 71px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+  }
+
+  p{
+    font-family: 'Inter', sans-serif; 
+    font-size: 12px;                  
+    font-weight: 500;                
+    line-height: 14.52px;           
+    letter-spacing: 0.04em;          
+    margin: 0;
+    padding-left:25px;
+    padding-right:25px;            
+  }
+
+  h5 {
+    font-family: Myriad Pro;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+    color: #47174C;
+    padding-left:30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .product-image {
+      width: 618px;
+      height: 574px;
+      padding-left: 40px;
+  }
+
+  p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #47174C;
+    text-align: start;
+  }
+
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .product-image {
+      width: 732px;
+      height: 679px;
+      top: 356px; 
+  }
+
+  h5{
+    font-family: Myriad Pro;
+    font-size: 22px;
+    font-weight: 700; 
+    line-height: 26.4px;
+    letter-spacing: 0.06em;
+    text-align: right;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+
 
 /*Descoperă Produsul nostru Section*/
 
