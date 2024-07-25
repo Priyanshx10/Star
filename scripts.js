@@ -1,39 +1,46 @@
-const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-  function showSlide(n) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (n + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }
-
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
-
-  setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const navToggle = document.querySelector("#nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
-  
-    navToggle.addEventListener("change", function() {
-      if (navToggle.checked) {
-        navLinks.style.display = "flex";
-      } else {
-        navLinks.style.display = "none";
-      }
+    navToggle.addEventListener('change', function() {
+        if (this.checked) {
+            mobileNav.style.display = 'flex';
+        } else {
+            mobileNav.style.display = 'none';
+        }
     });
-  });
-  
-  document.getElementById('toggleButton').addEventListener('click', function() {
-    var featuresList = document.getElementById('featuresList');
-    if (featuresList.style.display === 'none' || featuresList.style.display === '') {
-      featuresList.style.display = 'block';
-      this.textContent = 'Închide';
-    } else {
-      featuresList.style.display = 'none';
-      this.textContent = 'Arată';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
-  });
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    // Show the first slide initially
+    showSlide(currentIndex);
+
+    // Set the interval for automatic sliding (e.g., every 3 seconds)
+    setInterval(nextSlide, 3000);
+
+    // Add click event listeners to dots
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
+});
